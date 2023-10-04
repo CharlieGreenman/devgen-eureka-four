@@ -8,6 +8,7 @@ import { GlobalHeaderComponentModule } from "@devgen-eureka-four/common/ui";
 import { GlobalFooterModule } from "@devgen-eureka-four/common/ui";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { StoreModule } from "@ngrx/store";
+import { StoreRouterConnectingModule, routerReducer } from "@ngrx/router-store";
 
 @NgModule({
   declarations: [AppComponent],
