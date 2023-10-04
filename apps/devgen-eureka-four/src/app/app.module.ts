@@ -6,10 +6,16 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./routing/app-routing.module";
 import { GlobalHeaderComponentModule } from "@devgen-eureka-four/common/ui";
 import { GlobalFooterModule } from "@devgen-eureka-four/common/ui";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { StoreModule } from "@ngrx/store";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule, StoreModule.forRoot({}), StoreDevtoolsModule.instrument({
+    maxAge: 25, // Retains last 25 states
+    logOnly: environment.production, // Restrict extension to log-only mode
+    autoPause: true, // Pauses recording actions and state changes when the extension window is not open
+  }),],
   providers: [],
   bootstrap: [AppComponent],
 })
