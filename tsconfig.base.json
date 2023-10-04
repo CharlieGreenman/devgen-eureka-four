@@ -32,6 +32,9 @@
       ],
       "@devgen-eureka-four/common/common-guards": [
         "libs/common/common-guards/src/index.ts"
+      ],
+      "@devgen-eureka-four/data-access": [
+        "libs/data-access/src/index.ts"
       ]
     }
   },
